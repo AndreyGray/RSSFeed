@@ -1,0 +1,6 @@
+*.iml .gradle /local.properties /.idea/workspace.xml /.idea/libraries .idea .DS_Store /build /captures .externalNativeBuild
+
+git remote add origin https://github.com/AndreyGray/RSSReader.git
+
+git commit - m "My First Commit"
+git push origin

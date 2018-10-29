@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RSSFeed</string>
+    <string name="title">Title</string>
+    <string name="pub_date">2018 -10 -24 22.21.00</string>
+    <string name="content">Content</string>
+    <string name="refresh">Refresh</string>
+    <string name="news">InfoCarNews</string>
+    <string name="todo">Image</string>
+</resources>
