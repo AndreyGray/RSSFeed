@@ -11,9 +11,9 @@ import android.view.MenuItem;
 
 import com.google.gson.Gson;
 
-import andreyskakunenko.rssfeed.Adapter.FeedAdapter;
-import andreyskakunenko.rssfeed.Common.HTTPDataHandler;
-import andreyskakunenko.rssfeed.Model.RSSObject;
+import andreyskakunenko.rssfeed.adapter.FeedAdapter;
+import andreyskakunenko.rssfeed.common.HTTPDataHandler;
+import andreyskakunenko.rssfeed.model.RSSObject;
 
 
 public class MainActivity extends AppCompatActivity {
