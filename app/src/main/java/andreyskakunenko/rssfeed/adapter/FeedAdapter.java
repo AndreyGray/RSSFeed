@@ -13,13 +13,13 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import andreyskakunenko.rssfeed.R;
 import andreyskakunenko.rssfeed.interfaces.ItemClickListener;
 import andreyskakunenko.rssfeed.model.RSSObject;
-import andreyskakunenko.rssfeed.R;
 
-class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{
+class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
-    TextView txtTitle, txtPubDate,txtContent;
+    TextView txtTitle, txtPubDate, txtContent;
     private ItemClickListener itemClickListener;
     ImageView mImageView;
 
@@ -38,27 +38,25 @@ class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
 
     }
 
-    void setItemClickListener(ItemClickListener itemClickListener){
+    void setItemClickListener(ItemClickListener itemClickListener) {
         this.itemClickListener = itemClickListener;
 
     }
 
     @Override
     public void onClick(View v) {
-        itemClickListener.onClick(v,getAdapterPosition(),false);
+        itemClickListener.onClick(v, getAdapterPosition(), false);
     }
 
     @Override
     public boolean onLongClick(View v) {
-        itemClickListener.onClick(v,getAdapterPosition(),true);
+        itemClickListener.onClick(v, getAdapterPosition(), true);
         return true;
     }
 }
 
 
-
-
-public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder>{
+public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
 
     private Context mContext;
     private RSSObject mRSSObject;
@@ -73,8 +71,8 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder>{
     @NonNull
     @Override
     public FeedViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View itemView  = mInflater.inflate(R.layout.row, viewGroup, false);
-        return  new FeedViewHolder(itemView);
+        View itemView = mInflater.inflate(R.layout.row, viewGroup, false);
+        return new FeedViewHolder(itemView);
     }
 
     @Override
@@ -87,12 +85,11 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder>{
         feedViewHolder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
-                try{if(!isLongClick){
+                if (!isLongClick) {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mRSSObject.getItems().get(position).getLink()));
                     mContext.startActivity(browserIntent);
                 }
-                }catch (Exception e) {
-                }
+
             }
         });
 
