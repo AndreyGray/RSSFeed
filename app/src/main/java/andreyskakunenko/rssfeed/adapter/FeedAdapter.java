@@ -87,9 +87,11 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder>{
         feedViewHolder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
-                if(!isLongClick){
+                try{if(!isLongClick){
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mRSSObject.getItems().get(position).getLink()));
                     mContext.startActivity(browserIntent);
+                }
+                }catch (Exception e) {
                 }
             }
         });

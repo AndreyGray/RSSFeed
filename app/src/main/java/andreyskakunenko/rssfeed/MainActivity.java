@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             mRSSObject = new Gson().fromJson(s,RSSObject.class);
-            FeedAdapter adapter = new FeedAdapter(getBaseContext(),mRSSObject);
+            FeedAdapter adapter = new FeedAdapter(MainActivity.this,mRSSObject);
             recyclerView.setAdapter(adapter);
             adapter.notifyDataSetChanged();
         }

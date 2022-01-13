@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\User\\AndroidStudioProjects\\RSSFeed\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
+            "outputFile": "/Users/andreyskakunenko/StudioProjects/RSSFeed/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7c5a2c22150a2a66c74b5778eb1be2fe\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "/Users/andreyskakunenko/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/dd019df1d29a80eaf8a729801b7dc2e3/res/values-watch-v21/values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

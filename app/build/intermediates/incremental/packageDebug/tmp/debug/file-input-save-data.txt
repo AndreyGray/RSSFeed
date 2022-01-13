@@ -1,11 +1,11 @@
 #Internal package file, do not edit.
-#Wed Mar 24 21:48:36 EET 2021
-1.base=C\:\\Users\\User\\AndroidStudioProjects\\RSSFeed\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Thu Jan 13 17:44:20 EET 2022
+1.base=/Users/andreyskakunenko/StudioProjects/RSSFeed/app/build/intermediates/transforms/dexMerger/debug/1
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
 count=2
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=C\:\\Users\\User\\AndroidStudioProjects\\RSSFeed\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+0.base=/Users/andreyskakunenko/StudioProjects/RSSFeed/app/build/intermediates/transforms/dexMerger/debug/0
 1.path=classes.dex

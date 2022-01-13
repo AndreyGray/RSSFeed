@@ -1,7 +1,7 @@
-#Wed Mar 24 21:48:36 EET 2021
-base.0=C\:\\Users\\User\\AndroidStudioProjects\\RSSFeed\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+#Thu Jan 13 17:44:20 EET 2022
+base.0=/Users/andreyskakunenko/StudioProjects/RSSFeed/app/build/intermediates/transforms/dexMerger/debug/1
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\User\\AndroidStudioProjects\\RSSFeed\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+base.1=/Users/andreyskakunenko/StudioProjects/RSSFeed/app/build/intermediates/transforms/dexMerger/debug/0
