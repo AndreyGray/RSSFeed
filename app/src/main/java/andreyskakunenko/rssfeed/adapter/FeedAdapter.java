@@ -17,7 +17,7 @@ import andreyskakunenko.rssfeed.R;
 import andreyskakunenko.rssfeed.interfaces.ItemClickListener;
 import andreyskakunenko.rssfeed.model.RSSObject;
 
-class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
+class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     TextView txtTitle, txtPubDate, txtContent;
     private ItemClickListener itemClickListener;
@@ -34,7 +34,6 @@ class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
         txtContent = itemView.findViewById(R.id.txt_content);
 
         itemView.setOnClickListener(this);
-        itemView.setOnLongClickListener(this);
 
     }
 
@@ -48,11 +47,6 @@ class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
         itemClickListener.onClick(v, getAdapterPosition(), false);
     }
 
-    @Override
-    public boolean onLongClick(View v) {
-        itemClickListener.onClick(v, getAdapterPosition(), true);
-        return true;
-    }
 }
 
 
