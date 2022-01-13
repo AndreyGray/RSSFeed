@@ -17,6 +17,8 @@ import andreyskakunenko.rssfeed.model.RSSObject;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    String str;
     Toolbar toolbar;
     RecyclerView recyclerView;
     RSSObject mRSSObject;
