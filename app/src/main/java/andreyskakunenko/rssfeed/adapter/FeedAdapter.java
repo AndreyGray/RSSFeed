@@ -52,9 +52,9 @@ class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
 
 public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
 
-    private Context mContext;
-    private RSSObject mRSSObject;
-    private LayoutInflater mInflater;
+    Context mContext;
+    RSSObject mRSSObject;
+    LayoutInflater mInflater;
 
     public FeedAdapter(Context context, RSSObject RSSObject) {
         mContext = context;

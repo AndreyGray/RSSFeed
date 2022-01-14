@@ -1,5 +1,6 @@
 package andreyskakunenko.rssfeed;
 
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +15,6 @@ import com.google.gson.Gson;
 import andreyskakunenko.rssfeed.adapter.FeedAdapter;
 import andreyskakunenko.rssfeed.common.HTTPDataHandler;
 import andreyskakunenko.rssfeed.model.RSSObject;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext(),LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false));
 
         loadRSS();
     }
@@ -46,18 +46,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId()==R.id.menu_refresh){
+        if (item.getItemId() == R.id.menu_refresh) {
             loadRSS();
         }
         return true;
     }
-    public class LoadRSS extends AsyncTask<String,String,String>{
+
+    @SuppressLint("StaticFieldLeak")
+    public class LoadRSS extends AsyncTask<String, String, String> {
 
         @Override
         protected String doInBackground(String... strings) {
@@ -67,10 +69,11 @@ public class MainActivity extends AppCompatActivity {
             return result;
         }
 
+        @SuppressLint("NotifyDataSetChanged")
         @Override
         protected void onPostExecute(String s) {
-            mRSSObject = new Gson().fromJson(s,RSSObject.class);
-            FeedAdapter adapter = new FeedAdapter(MainActivity.this,mRSSObject);
+            mRSSObject = new Gson().fromJson(s, RSSObject.class);
+            FeedAdapter adapter = new FeedAdapter(MainActivity.this, mRSSObject);
             recyclerView.setAdapter(adapter);
             adapter.notifyDataSetChanged();
         }
