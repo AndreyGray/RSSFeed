@@ -42,6 +42,9 @@ class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
 
     }
 
+    //skfjg;ljn
+    ///wkefpoikegfpokwe
+    //weofkjpik
     @Override
     public void onClick(View v) {
         itemClickListener.onClick(v, getAdapterPosition(), false);
