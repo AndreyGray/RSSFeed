@@ -39,7 +39,7 @@ class FeedViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
 
     void setItemClickListener(ItemClickListener itemClickListener) {
         this.itemClickListener = itemClickListener;
-
+/////
     }
 
     @Override
